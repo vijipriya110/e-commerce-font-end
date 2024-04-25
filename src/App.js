@@ -1,16 +1,32 @@
 
+// import { Switch } from 'react-router-dom';
 import './App.css';
 import Footer from './Components/Footer.js';
 import Header from './Components/Header.js';
-import Home from './Components/Home.js';
+import Homee from './Components/Homee.js';
+
+// import { Route} from 'react-router-dom';
+
+// import Homee from './Components/Homee.js';
+
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Home />
+      {/* <Switch> */}
+        {/* <div> */}
+       <Header />
+    
+      {/* <Route exact path="/"> */}
+      <Homee/>
+      {/* </Route> */}
       <Footer />
+      {/* </div> */}
+     
+    {/* </Switch> */}
+    
     </div>
+
   );
 }
 
