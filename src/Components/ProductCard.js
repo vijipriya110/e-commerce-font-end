@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProductCard({product}) {
   return (
-    <div>
+    
         <div className="col-sm-12 col-md-6 col-lg-3 my-3">
                     <div className="card p-3 rounded">
                         <img
@@ -23,7 +23,7 @@ function ProductCard({product}) {
                         </div>
                     </div>
         </div>
-    </div>
+    
   )
 }
 

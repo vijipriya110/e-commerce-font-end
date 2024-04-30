@@ -7,7 +7,7 @@ function Homee() {
 
     useEffect(()=>{
         const getProducts = async () =>{
-            const response = await fetch("https://urlshortner-back-end.vercel.app/url/getuser", {
+            const response = await fetch("https://e-commerce-back-end-cay8.vercel.app/api/products", {
               method:"GET",
             //   headers :{
             //     "Content-Type":"application/json",
@@ -16,8 +16,8 @@ function Homee() {
             }); 
             const products = await response.json();
             console.log(products.products)
-            if([products]){
-              setProducts(products)
+            if(products){
+              setProducts(products.products)
             }
         }
         getProducts();
@@ -29,7 +29,8 @@ function Homee() {
 
         <section id="products" className="container mt-5">
             <div className="row">
-                <ProductCard />
+              {products.map(product=> <ProductCard product={product}/>)}
+                
             </div>
         </section>
     </Fragment>
