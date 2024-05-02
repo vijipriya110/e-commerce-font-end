@@ -1,13 +1,15 @@
 // import React from 'react'
 import React, { Fragment, useEffect, useState } from 'react'
 import ProductCard from './ProductCard'
+import { useSearchParams } from 'react-router-dom'
 
 function Homee() {
     const [products, setProducts] = useState([])
+    const [searchParams, setSearchParams] = useSearchParams();
 
     useEffect(()=>{
         const getProducts = async () =>{
-            const response = await fetch("https://e-commerce-back-end-cay8.vercel.app/api/products", {
+            const response = await fetch("https://e-commerce-back-end-cay8.vercel.app/api/products?"+searchParams, {
               method:"GET",
             //   headers :{
             //     "Content-Type":"application/json",
@@ -22,7 +24,7 @@ function Homee() {
         }
         getProducts();
         
-      }, [] )
+      }, [searchParams] )
 
     return <Fragment>
         <h1 id="products_heading">Latest Products</h1>
