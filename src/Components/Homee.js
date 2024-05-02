@@ -1,4 +1,3 @@
-// import React from 'react'
 import React, { Fragment, useEffect, useState } from 'react'
 import ProductCard from './ProductCard'
 import { useSearchParams } from 'react-router-dom'

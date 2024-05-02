@@ -1,5 +1,3 @@
-
-// import { Switch } from 'react-router-dom';
 import './App.css';
 import Footer from './Components/Footer.js';
 import Header from './Components/Header.js';
@@ -10,10 +8,7 @@ import { useState } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Cart from './Components/Cart.js';
-// import { Route } from 'react-router-dom';
-// import Search from './Components/Search.js';/
 
-// import Homee from './Components/Homee.js';
 
 
 function App() {
